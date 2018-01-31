@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: newton
+  cloud:
+    config:
+      laber: master
+#      profile: master
+      uri: http://localhost:6100/
