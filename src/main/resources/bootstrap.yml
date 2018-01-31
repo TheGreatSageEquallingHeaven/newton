@@ -1,8 +1,18 @@
 spring:
   application:
     name: newton
-  cloud:
-    config:
-      laber: master
+server:
+  port: 3100
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url.defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  cloud:
+#    config:
+#      laber: master
 #      profile: master
-      uri: http://localhost:6100/
+#      uri: http://localhost:6100/
+
